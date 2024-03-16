@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <title>科技语者资源站</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://simply.webkit.top/content/templates/simply/assets/js/layui/2.9.2/css/layui.css">
+    <link rel="stylesheet" href="https://simply.webkit.top/content/templates/simply/assets/js/swiper/8.4.7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://simply.webkit.top/content/templates/simply/assets/css/reset.css">
+    <link rel="stylesheet" href="https://simply.webkit.top/content/templates/simply/assets/js/icon/iconfont.css?t=1706260572">
+    <link rel="stylesheet" href="https://simply.webkit.top/content/templates/simply/assets/css/simply.css?t=1706260572">
+    <script>
+        window.theme = {
+            isMobile: /windows phone|iphone|android|HarmonyOS/gi.test(window.navigator.userAgent),
+            mediaQuery: window.matchMedia('(prefers-color-scheme: dark)'),
+            detectIE: function() {
+                let ua = window.navigator.userAgent,
+                    ie = ua.indexOf('MSIE ');
+                if (ie > 0) {
+                    return parseInt(ua.substring(ie + 5, ua.indexOf('.', ie)), 10);
+                }
+                if (ua.indexOf('Trident/') > 0) {
+                    let rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+                let edge = ua.indexOf('.Edge/');
+                return edge > 0 && parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            },
+            swiperDelay: 3
+        }
+        theme.detectIE() && alert('当前站点不支持IE浏览器（或您开启了兼容模式），请使用其他浏览器访问（或关闭兼容模式）。');
+        localStorage.getItem('dark-mode') && document.documentElement.classList.add('dark');
+
+        function darkModeHandler() {
+            if (!theme.isMobile) return;
+            if (theme.mediaQuery.matches) {
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+            }
+        }
+        darkModeHandler();
+        theme.mediaQuery.addListener(darkModeHandler);
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="flex-v-between container">
+            <div class="flex-v-center left">
+                <a class="flex-v-center logo" href="https://simply.webkit.top/" title="Simply是一款简约风格的Emlog博客模板，响应式布局、界面简单大方，实用性强！">
+                    <img class="image" src="/img/LOGO.png" alt="Simply简洁博客主题">
+                </a>
+            </div>
+            <div class="flex-v-between right">
+                <nav>
+                    <nav>
+                        <ul class="nav-items">
+                            <li class="item"><a href="https://simply.webkit.top/">首页</a></li>
+                            <li class="item"><a href="https://simply.webkit.top/sort/1">前端开发</a></li>
+                            <li class="item"><a href="https://simply.webkit.top/sort/2">后端开发</a></li>
+                            <li class="item">
+                                <a>生活杂记<i class="icon-simply icon-down ml-5"></i></a>
+                                <div class="nav-child-box">
+                                    <ul class="nav-child-items">
+                                        <li class="item"><a href="https://simply.webkit.top/sort/4">测试分类</a></li>
+                                        <li class="item"><a href="https://simply.webkit.top/sort/5">测试类二</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item"><a href="https://simply.webkit.top/introduce.html">主题简介</a></li>
+                            <li class="item">
+                                <a>更多模板<i class="icon-simply icon-down ml-5"></i></a>
+                                <div class="nav-child-box">
+                                    <ul class="nav-child-items">
+                                        <li class="item"><a href="https://simply.webkit.top/">Simply极简</a></li>
+                                        <li class="item"><a href="https://colorful.webkit.top/" target="_blank">Colorful多彩</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+                <div class="divider-vertical">
+                    <button class="button-switch" id="dark-mode" type="button" role="switch">
+        			<div class="icon-box">
+        				<i class="icon-simply icon-during"></i>
+        				<i class="icon-simply icon-night"></i>
+        			</div>
+        		</button>
+                </div>
+                <div class="divider-vertical"><a class="color-theme" href="https://simply.webkit.top/admin/">登录</a></div>
+                <div class="divider-vertical"><a class="color-theme" href="https://simply.webkit.top/admin/account.php?action=signup">注册</a></div>
+            </div>
+            <div class="flex-center xs-nav-button">
+                <div class="nav-burger"></div>
+            </div>
+            <div class="xs-nav-layer"></div>
+        </div>
+    </header>
+
+    <div class="container frame-container">
+        <main class="box frame-main">
+
+            <div class="display-flex film-box">
+                <div class="swiper swiper-filmstrip" id="swiper-filmstrip-index-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a class="percent-image" href="https://simply.webkit.top/?post=1">
+                                <figure class="figure">
+                                    <img src="https://simply.webkit.top/content/templates/simply/assets/images/650_365_1.jpg" alt="自定义幻灯片1" />
+                                    <figcaption class="figcaption">
+                                        <span class="badge mr-5">推荐</span>
+                                        <span class="title">自定义幻灯片1</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="percent-image" href="https://simply.webkit.top/?post=2">
+                                <figure class="figure">
+                                    <img src="https://simply.webkit.top/content/templates/simply/assets/images/650_365_2.jpg" alt="自定义幻灯片2" />
+                                    <figcaption class="figcaption">
+                                        <span class="badge mr-5">推荐</span>
+                                        <span class="title">自定义幻灯片2</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="percent-image" href="https://simply.webkit.top/?post=3">
+                                <figure class="figure">
+                                    <img src="https://simply.webkit.top/content/templates/simply/assets/images/650_365_3.jpg" alt="自定义幻灯片3" />
+                                    <figcaption class="figcaption">
+                                        <span class="badge mr-5">推荐</span>
+                                        <span class="title">自定义幻灯片3</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="simply-pagination"></div>
+                    <div class="simply-button-prev">
+                        <i class="icon-simply icon-prev"></i>
+                    </div>
+                    <div class="simply-button-next">
+                        <i class="icon-simply icon-next"></i>
+                    </div>
+                </div>
+                <ul class="recommend-image">
+                    <li class="item">
+                        <a class="percent-image" href="https://simply.webkit.top/?post=7">
+                            <figure class="figure">
+                                <img src="https://simply.webkit.top/content/templates/simply/assets/images/650_365_7.jpg" alt="自定义推荐图1" />
+                                <figcaption class="figcaption">
+                                    <span class="badge mr-5">推荐</span>
+                                    <span class="title">自定义推荐图1</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="percent-image" href="https://simply.webkit.top/?post=8">
+                            <figure class="figure">
+                                <img src="https://simply.webkit.top/content/templates/simply/assets/images/650_365_8.jpg" alt="自定义推荐图2" />
+                                <figcaption class="figcaption">
+                                    <span class="badge mr-5">推荐</span>
+                                    <span class="title">自定义推荐图2</span>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modularity modularity-list">
+                <div class="modul-head">
+                    <ul class="flex-list">
+                        <li class="item active">最新文章</li>
+                    </ul>
+                    <ul class="flex-list">
+                        <li class="item">
+                            <a href="https://www.aliyun.com/daily-act/ecs/ecs_trial_benefits?userCode=0ooodptx" target="_blank">云服务器省钱攻略</a>
+                        </li>
+                        <li class="item">
+                            <a href="https://curl.qcloud.com/tUxzPJel" target="_blank">年末感恩回馈</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modul-body">
+                    <ul class="article-list">
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/9">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702600631.jpg" alt="Simply主题" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <span title="首页置顶" class="badge">置顶</span> <a href="https://simply.webkit.top/post/9">Simply主题</a>
+                                </h3>
+                                <div class="description">SimplyForEmblogPro</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:59 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>484 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/9#comment"><i class="icon-simply icon-message mr-3"></i>3</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/BUG"><i class="icon-simply icon-tag mr-3"></i>BUG</a><a class="tag" href="https://simply.webkit.top/tag/%E5%8F%8D%E9%A6%88"><i class="icon-simply icon-tag mr-3"></i>反馈</a>                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/12">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702460879.jpg" alt="这是一篇没有内容和摘要的文章" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/12">这是一篇没有内容和摘要的文章</a>
+                                </h3>
+                                <div class="description"></div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-13 14:16 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>296 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/12#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/11">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702533369.jpg" alt="这是一篇加密文章，密码123" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/11">这是一篇加密文章，密码123</a>
+                                </h3>
+                                <div class="description">[该文章已加密，请点击标题输入密码访问]</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/4"> <i class="icon-simply icon-category mr-3"></i>测试分类 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-12 17:49 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>171 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/11#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/%E5%8A%A0%E5%AF%86"><i class="icon-simply icon-tag mr-3"></i>加密</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/8">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702460836.jpg" alt="视频文章" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/8">视频文章</a>
+                                </h3>
+                                <div class="description">视频前文字如果你无法看到该视频，那么可能你的电脑不支持该文件格式。视频后文字</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:57 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>1111 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/8#comment"><i class="icon-simply icon-message mr-3"></i>4</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/%E8%A7%86%E9%A2%91"><i class="icon-simply icon-tag mr-3"></i>视频</a><a class="tag" href="https://simply.webkit.top/tag/video"><i class="icon-simply icon-tag mr-3"></i>video</a>                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/7">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702011424.jpg" alt="图文混排文章" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/7">图文混排文章</a>
+                                </h3>
+                                <div class="description">图前文字图后文字</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:56 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>294 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/7#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/6">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702862180.jpg" alt="This is a pure English title" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/6">This is a pure English title</a>
+                                </h3>
+                                <div class="description">oh~no!</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:54 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>106 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/6#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/5">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702533383.jpg" alt="我是一个超级长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的标题" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/5">我是一个超级长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长的标题</a>
+                                </h3>
+                                <div class="description">长标题摘要</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/2"> <i class="icon-simply icon-category mr-3"></i>后端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:53 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>184 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/5#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/%E6%A0%87%E9%A2%98"><i class="icon-simply icon-tag mr-3"></i>标题</a><a class="tag" href="https://simply.webkit.top/tag/%E8%B6%85%E9%95%BF"><i class="icon-simply icon-tag mr-3"></i>超长</a>                                        </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/4">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702011154.jpg" alt="纯图片文章（封面图）" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/4">纯图片文章（封面图）</a>
+                                </h3>
+                                <div class="description">纯图片文章（多图、带封面图）摘要</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:52 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>135 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/4#comment"><i class="icon-simply icon-message mr-3"></i>1</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/image"><i class="icon-simply icon-tag mr-3"></i>image</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/3">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702533484.jpg" alt="纯图片文章（多图）" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/3">纯图片文章（多图）</a>
+                                </h3>
+                                <div class="description">纯图片文章摘要</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <span class="sort"><i class="icon-simply icon-category mr-3"></i>默认分类</span>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:50 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>195 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/3#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/image"><i class="icon-simply icon-tag mr-3"></i>image</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="thumbnail">
+                                <a class="percent-image" href="https://simply.webkit.top/post/2">
+                                    <figure class="figure">
+                                        <img src="https://simply.webkit.top/content/uploadfile/202312/4b1c1702533422.jpg" alt="Markdown纯文字文章" />
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="infomation">
+                                <h3 class="title">
+                                    <a href="https://simply.webkit.top/post/2">Markdown纯文字文章</a>
+                                </h3>
+                                <div class="description">我是纯文字文章的描述信息</div>
+                                <ul class="flex-list meta">
+                                    <li class="item sort">
+                                        <a class="sort" href="https://simply.webkit.top/sort/1"> <i class="icon-simply icon-category mr-3"></i>前端开发 </a>
+                                    </li>
+                                    <!--
+                                <li class="item item_author">
+                                    <a class="author" href="https://simply.webkit.top/author/1"><i class="icon-simply icon-author mr-3"></i>下载幸福</a>                                </li>
+                                -->
+                                    <li class="item time">
+                                        <i class="icon-simply icon-time mr-3"></i>2023-12-8 12:43 </li>
+                                    <li class="item view">
+                                        <i class="icon-simply icon-view mr-3"></i>559 </li>
+                                    <li class="item comt">
+                                        <a href="https://simply.webkit.top/post/2#comment"><i class="icon-simply icon-message mr-3"></i>0</a>
+                                    </li>
+                                    <li class="item tags">
+                                        <a class="tag" href="https://simply.webkit.top/tag/markdown"><i class="icon-simply icon-tag mr-3"></i>markdown</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagination">
+                        <span>1</span> <a href="https://simply.webkit.top/page/2">2</a> </div>
+                </div>
+            </div>
+        </main>
+        <aside class="frame-aside">
+
+            <div class="box aside-blogger">
+                <div class="blogger-image">
+                    <img src="https://simply.webkit.top/content/templates/simply/assets/images/blogger.jpg" alt="下载幸福" />
+                </div>
+                <div class="user-info">
+                    <div class="avatar">
+                        <img src="https://simply.webkit.top/content/uploadfile/202312/ad7b1702010445.jpg" alt="下载幸福" />
+                    </div>
+                    <div class="user-meta">
+                        <div class="nickname">科技语者</div>
+                        <div class="other">当代科技智慧 引领未来语言</div>
+                    </div>
+                </div>
+                <ul class="flex-list blogger-statistic">
+                    <li class="item">
+                        <div class="name">文章数</div>
+                        <div class="value">13</div>
+                    </li>
+                    <li class="item">
+                        <div class="name">评论数</div>
+                        <div class="value">10</div>
+                    </li>
+                    <li class="item">
+                        <div class="name">用户数</div>
+                        <div class="value">5</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="box modularity aside-search">
+                <div class="modul-head">
+                    <div class="modul-title">
+                        <i class="icon-simply icon-search mr-5"></i>搜索一下 </div>
+                    <div class="colorful-dot"></div>
+                </div>
+                <div class="modul-body">
+                    <form name="aside-search-form" method="get" action="https://simply.webkit.top/index.php">
+                        <input name="keyword" class="search-input" autocomplete="off" aria-label="Search" type="text">
+                        <button type="submit" class="search-submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box modularity aside-puzzle">
+                <div class="modul-head">
+                    <div class="modul-title">
+                        <i class="icon-simply icon-puzzle mr-5"></i>时光慢漫 </div>
+                    <div class="colorful-dot"></div>
+                </div>
+                <div class="modul-body">
+                    <div class="aside-timelife-body"></div>
+                </div>
+            </div>
+            <div class="box modularity aside-archive">
+                <div class="modul-head">
+                    <div class="modul-title">
+                        <i class="icon-simply icon-archive mr-5"></i>存档 </div>
+                    <div class="colorful-dot"></div>
+                </div>
+                <div class="modul-body">
+                    <div class="virtual-select">
+                        <div class="action">
+                            <div class="value">请选择</div>
+                            <i class="icon-simply icon-down"></i>
+                        </div>
+                        <ul class="select">
+                            <li class="option"><a href="https://simply.webkit.top/record/202312">2023年12月（10）</a></li>
+                            <li class="option"><a href="https://simply.webkit.top/record/202311">2023年11月（1）</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="container">
+        <div class="box modularity aside-interlinkage">
+            <div class="modul-head">
+                <div class="modul-title">
+                    <i class="icon-simply icon-link mr-5"></i>友情链接 </div>
+                <div class="colorful-dot"></div>
+            </div>
+            <div class="modul-body">
+                <ul class="flex-list flex-warp aside-interlinkage-list">
+                    <li class="item"><a href="https://www.emlog.net/?ic=RTOJY8Un" title="emlog官方主页" target="_blank">EMLOG官方网站</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/" title="" target="_blank">官方文档</a></li>
+                    <li class="item"><a href="https://www.emlog.cn/" title="" target="_blank">用户社区</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/#/faq" title="" target="_blank">常见问题</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/#/contact" title="" target="_blank">联系方式</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/#/install" title="" target="_blank">部署安装</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/#/api" title="" target="_blank">API接口文档</a></li>
+                    <li class="item"><a href="https://www.emlog.net/docs/#/changelog" title="" target="_blank">更新记录</a></li>
+                    <li class="item"><a href="https://www.emlog.net/download" title="" target="_blank">下载地址</a></li>
+                    <li class="item"><a href="https://www.emlog.net/template" title="" target="_blank">应用商店</a></li>
+                    <li class="item"><a href="https://www.emlog.net/register?ic=RTOJY8Un" title="" target="_blank">付费支持</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="xs-hidden">来不及找到心仪的内容？按<kbd class="mx-5">Ctrl</kbd>＋<kbd class="mx-5">D</kbd>加入收藏夹吧！</div>
+            <ul class="flex-list">
+                <li class="item"><a href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=京公网安备XXXXXXXXXXXX号" target="_blank">京公网安备XXXXXXXXXXXX号</a></li>
+                <li class="item">Theme Simply By <a href="//www.webkit.top" target="_blank">JatSelf</a></li>
+            </ul>
+            <div class="info">
+                <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2023030822号-1</a> | 本站基于<a href="https://curl.qcloud.com/tUxzPJel" target="_blank">腾讯云</a> | <a href="https://www.aliyun.com/daily-act/ecs/ecs_trial_benefits?userCode=0ooodptx"
+                    target="_blank">阿里云</a> | <a href="https://www.emlog.net" target="_blank">EmlogPro</a>
+                <script>
+                    ! function(p) {
+                        "use strict";
+                        ! function(t) {
+                            var s = window,
+                                e = document,
+                                i = p,
+                                c = "".concat("https:" === e.location.protocol ? "https://" : "http://", "sdk.51.la/js-sdk-pro.min.js"),
+                                n = e.createElement("script"),
+                                r = e.getElementsByTagName("script")[0];
+                            n.type = "text/javascript", n.setAttribute("charset", "UTF-8"), n.async = !0, n.src = c, n.id = "LA_COLLECT", i.d = n;
+                            var o = function() {
+                                s.LA.ids.push(i)
+                            };
+                            s.LA ? s.LA.ids && o() : (s.LA = p, s.LA.ids = [], o()), r.parentNode.insertBefore(n, r)
+                        }()
+                    }({
+                        id: "KHHxF3AZ2YznjvOy",
+                        ck: "KHHxF3AZ2YznjvOy",
+                        autoTrack: true,
+                        hashMode: true
+                    });
+                </script>
+            </div>
+        </div>
+    </footer>
+    <div class="sidebar">
+        <div class="item sidebar-totop">
+            <i class="icon-simply icon-totop"></i>
+        </div>
+    </div>
+    <script src="https://simply.webkit.top/content/templates/simply/assets/js/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://simply.webkit.top/content/templates/simply/assets/js/layui/2.9.2/layui.js"></script>
+    <script src="https://simply.webkit.top/content/templates/simply/assets/js/swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script src="https://simply.webkit.top/content/templates/simply/assets/js/clipboard/2.0.11/clipboard.min.js"></script>
+    <script src="https://simply.webkit.top/content/templates/simply/assets/js/simply.js?t=1706260572"></script>
+</body>
+
+</html>
