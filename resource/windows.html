@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>windows</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link type="text/css" rel="stylesheet" href="./css/header.css" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <style type="text/css">
+        .down_nav .nav strong {
+            font-size: 18px;
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 1195px;
+            margin: 0 auto;
+        }
+        
+        .path {
+            padding: 23px 0;
+            color: #999;
+        }
+        
+        .path a {
+            color: #3083eb;
+            margin: 0 8px;
+        }
+        
+        .path span {
+            color: #d0d0d0;
+        }
+        
+        .path .home_icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: top;
+            background: url(./img/图片1.png) no-repeat 0 -105px;
+        }
+        
+        .down_list .down_list_top {
+            height: 38px;
+            line-height: 38px;
+            background: #f3f6fd;
+            padding: 0 15px;
+            color: #999;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .down_list .down_list_top span.item_size {
+            margin-left: 500px;
+        }
+        
+        .down_list li {
+            height: 44px;
+            border-bottom: 1px solid #e9f0f8;
+            transition: 0.2s;
+            padding: 0 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .down_list li:hover {
+            background: #f3f6fd;
+        }
+        
+        .down_list li .file_name {
+            display: inline-block;
+            vertical-align: middle;
+            width: 450px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 44px;
+            color: #333;
+            font-size: 15px;
+        }
+        
+        .down_list li .type_icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            ;
+            margin-right: 10px;
+            background: url(./img/图片1.png) no-repeat 0 -370px;
+        }
+        
+        .down_list li.folder .type_icon {
+            background-position: 0 -308px;
+        }
+        
+        .down_list li.mp3 .type_icon {
+            background-position: 0 -160px;
+        }
+        
+        .down_list li.video .type_icon {
+            background-position: 0 -190px;
+            height: 12px;
+        }
+        
+        .down_list li.txt .type_icon {
+            background-position: 0 -210px;
+        }
+        
+        .down_list li.pdf .type_icon {
+            background-position: 0 -235px;
+        }
+        
+        .down_list li.doc .type_icon {
+            background-position: 0 -265px;
+        }
+        
+        .down_list li.ppt .type_icon {
+            background-position: 0 -290px;
+        }
+        
+        .down_list li.xls .type_icon {
+            background-position: 0 -315px;
+        }
+        
+        .down_list li .file_size {
+            color: #a9a9ab;
+            font-family: Arial;
+            line-height: 44px;
+        }
+        
+        .down_list li .down_btn {
+            width: 78px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            margin-right: 5px;
+            background: #3083eb;
+            border-radius: 2px;
+            vertical-align: middle;
+        }
+        /*.down_list li:hover .down_btn{display: block;}*/
+        
+        .down_list li .down_btn .down_icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: -3px;
+            margin-right: 6px;
+            background: url(./img/图片1.png) no-repeat 0 -345px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="down_top">
+        <div class="down_banner"></div>
+    </div>
+    <div class="down_nav">
+        <div class="nav"><i class="book_icon"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="path">
+            <div class="down_list">
+                <div class="down_list_top">
+                    <span class="item item_file">文件名</span>
+                    <span class="item item_size">大小</span>
+                </div>
+                <ul>
+                    <a href="https://huang3333.sharepoint.com/sites/hk12/_layouts/15/download.aspx?UniqueId=1d817235-2429-4722-ae83-5f4b693403e2&Translate=false&tempauth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvaHVhbmczMzMzLnNoYXJlcG9pbnQuY29tQGI3YmZmZTYwLTViMDAtNGQ5ZS04MzhkLWM5NmI0NWU4MmIxOCIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE3MTA2NTc0NjMiLCJleHAiOiIxNzEwNjYxMDYzIiwiZW5kcG9pbnR1cmwiOiIvMmlZU045NndkNnZTVDJOQ0IvQk1NaWROakUyRTRvR29NM0pVL1NOU3d3PSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTMxIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJYRk9QV2xlRzlVT2JBdUN4bXQwanJRPT0iLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTURoaE56UTVOREV0WVRnMVpDMDBaR0ZqTFdJM05EQXRaakEzWTJWak4yRTBNMkUwIiwiYXBwX2Rpc3BsYXluYW1lIjoiY2xvdWRyZXZlIiwic2lnbmluX3N0YXRlIjoiW1wia21zaVwiXSIsImFwcGlkIjoiZTVlOTBhMTgtYWY4Yi00OWVmLTk5NjQtODE4YzYyMzgxMTYwIiwidGlkIjoiYjdiZmZlNjAtNWIwMC00ZDllLTgzOGQtYzk2YjQ1ZTgyYjE4IiwidXBuIjoiaGsxQGh1YW5nMzMzMy5vbm1pY3Jvc29mdC5jb20iLCJwdWlkIjoiMTAwMzIwMDIyMEYwOEM3MiIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyMjBmMDhjNzJAbGl2ZS5jb20iLCJzY3AiOiJhbGxmaWxlcy53cml0ZSIsInR0IjoiMiIsImlwYWRkciI6IjIwLjE5MC4xNDQuMTcwIn0.5y07eygMkmRgnUdrCFInBoNXAM7cRdcvHNG8Bw2Rq3s&ApiVersion=2.0">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>win7.iso</span>
+                            <span class="file_size">4.40GB</span>
+                        </li>
+                    </a>
+                    <a href="https://huang3333.sharepoint.com/sites/hk12/_layouts/15/download.aspx?UniqueId=9082f0a8-d1b4-49bd-a1f7-a05ace7ac41c&Translate=false&tempauth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvaHVhbmczMzMzLnNoYXJlcG9pbnQuY29tQGI3YmZmZTYwLTViMDAtNGQ5ZS04MzhkLWM5NmI0NWU4MmIxOCIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE3MTA2NTc1MDciLCJleHAiOiIxNzEwNjYxMTA3IiwiZW5kcG9pbnR1cmwiOiJ6Qk4rRnFKZGEyZ1hHQXVnSlBneXpDbkFVSHNVa0ZvdXk1OC80bWloZmZVPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTMxIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJ0R2VNTUg1NmZVS2dadFUrWFkvM0h3PT0iLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTURoaE56UTVOREV0WVRnMVpDMDBaR0ZqTFdJM05EQXRaakEzWTJWak4yRTBNMkUwIiwiYXBwX2Rpc3BsYXluYW1lIjoiY2xvdWRyZXZlIiwic2lnbmluX3N0YXRlIjoiW1wia21zaVwiXSIsImFwcGlkIjoiZTVlOTBhMTgtYWY4Yi00OWVmLTk5NjQtODE4YzYyMzgxMTYwIiwidGlkIjoiYjdiZmZlNjAtNWIwMC00ZDllLTgzOGQtYzk2YjQ1ZTgyYjE4IiwidXBuIjoiaGsxQGh1YW5nMzMzMy5vbm1pY3Jvc29mdC5jb20iLCJwdWlkIjoiMTAwMzIwMDIyMEYwOEM3MiIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyMjBmMDhjNzJAbGl2ZS5jb20iLCJzY3AiOiJhbGxmaWxlcy53cml0ZSIsInR0IjoiMiIsImlwYWRkciI6IjIwLjE5MC4xNDQuMTcwIn0.EsB3_A8VbXa67FGw65f27ZFcnwvUDFGwK5xNOxSSzNY&ApiVersion=2.0">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>win8.iso</span>
+                            <span class="file_size">2.80GB</span>
+                        </li>
+                    </a>
+                    <a href="https://huang3333.sharepoint.com/sites/hk12/_layouts/15/download.aspx?UniqueId=c46b71bc-61c2-4c56-a6c6-9130fb6a05d1&Translate=false&tempauth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvaHVhbmczMzMzLnNoYXJlcG9pbnQuY29tQGI3YmZmZTYwLTViMDAtNGQ5ZS04MzhkLWM5NmI0NWU4MmIxOCIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE3MTA2NTc1NTEiLCJleHAiOiIxNzEwNjYxMTUxIiwiZW5kcG9pbnR1cmwiOiIzSTRtcnQ4TSt0bENERUQxLzZOQkdaeGFuUnVNLzk4ZXZqVzdPSjkwZ2lRPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTMxIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiI0aTJYaWwxSzdVR2dUZU5JYW9RdnhBPT0iLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTURoaE56UTVOREV0WVRnMVpDMDBaR0ZqTFdJM05EQXRaakEzWTJWak4yRTBNMkUwIiwiYXBwX2Rpc3BsYXluYW1lIjoiY2xvdWRyZXZlIiwic2lnbmluX3N0YXRlIjoiW1wia21zaVwiXSIsImFwcGlkIjoiZTVlOTBhMTgtYWY4Yi00OWVmLTk5NjQtODE4YzYyMzgxMTYwIiwidGlkIjoiYjdiZmZlNjAtNWIwMC00ZDllLTgzOGQtYzk2YjQ1ZTgyYjE4IiwidXBuIjoiaGsxQGh1YW5nMzMzMy5vbm1pY3Jvc29mdC5jb20iLCJwdWlkIjoiMTAwMzIwMDIyMEYwOEM3MiIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyMjBmMDhjNzJAbGl2ZS5jb20iLCJzY3AiOiJhbGxmaWxlcy53cml0ZSIsInR0IjoiMiIsImlwYWRkciI6IjIwLjE5MC4xNDQuMTcwIn0.wruL3OuwwLLNSdy1xJGtWcbZOXtCkKrKngxrdmVELzI&ApiVersion=2.0">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>win10.iso</span>
+                            <span class="file_size">5.60GB</span>
+                        </li>
+                    </a>
+                    <a href="https://huang3333.sharepoint.com/sites/hk12/_layouts/15/download.aspx?UniqueId=e5ea80b2-1226-4409-8689-ae2e5bc5e31a&Translate=false&tempauth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvaHVhbmczMzMzLnNoYXJlcG9pbnQuY29tQGI3YmZmZTYwLTViMDAtNGQ5ZS04MzhkLWM5NmI0NWU4MmIxOCIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE3MTA2NTc1NzkiLCJleHAiOiIxNzEwNjYxMTc5IiwiZW5kcG9pbnR1cmwiOiJhazh5MWJKdHl2djV1U29jUDkrMm5MTExHZk45ZWF1eFVRdFlGaUZ2QXBzPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTMxIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiI3dDloS2E0eG8wVzRIQTVwbld1ZFFnPT0iLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTURoaE56UTVOREV0WVRnMVpDMDBaR0ZqTFdJM05EQXRaakEzWTJWak4yRTBNMkUwIiwiYXBwX2Rpc3BsYXluYW1lIjoiY2xvdWRyZXZlIiwic2lnbmluX3N0YXRlIjoiW1wia21zaVwiXSIsImFwcGlkIjoiZTVlOTBhMTgtYWY4Yi00OWVmLTk5NjQtODE4YzYyMzgxMTYwIiwidGlkIjoiYjdiZmZlNjAtNWIwMC00ZDllLTgzOGQtYzk2YjQ1ZTgyYjE4IiwidXBuIjoiaGsxQGh1YW5nMzMzMy5vbm1pY3Jvc29mdC5jb20iLCJwdWlkIjoiMTAwMzIwMDIyMEYwOEM3MiIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyMjBmMDhjNzJAbGl2ZS5jb20iLCJzY3AiOiJhbGxmaWxlcy53cml0ZSIsInR0IjoiMiIsImlwYWRkciI6IjIwLjE5MC4xNDQuMTcwIn0.tz29U3J6WjZvh57ELTzQMrB3zy7HYNFuQ7RgPaagVpk&ApiVersion=2.0">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>win11.iso</span>
+                            <span class="file_size">4.30GB</span>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div style="display:none;">
+            <!--<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F16e42eb8238c0a0bc831002e9a3a1a6a' type='text/javascript'%3E%3C/script%3E"));
+	</script> -->
+        </div>
+        <script type='text/javascript'>
+            var _vds = _vds || [];
+            window._vds = _vds;
+            (function() {
+                _vds.push(['setAccountId', '94f79fa7bbb7eeb1']);
+                (function() {
+                    var vds = document.createElement('script');
+                    vds.type = 'text/javascript';
+                    vds.async = true;
+                    vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(vds, s);
+                })();
+            })();
+        </script>
+</body>
+
+</html>

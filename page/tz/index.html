@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <title>科技语者资源站开站通知</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/layui.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/prism.css?t=1706260572">
+    <link rel="stylesheet" href="/css/iconfont.css?t=1706260572">
+    <link rel="stylesheet" href="/css/simply.css?t=1706260572">
+    <script>
+        window.theme = {
+            isMobile: /windows phone|iphone|android|HarmonyOS/gi.test(window.navigator.userAgent),
+            mediaQuery: window.matchMedia('(prefers-color-scheme: dark)'),
+            detectIE: function() {
+                let ua = window.navigator.userAgent,
+                    ie = ua.indexOf('MSIE ');
+                if (ie > 0) {
+                    return parseInt(ua.substring(ie + 5, ua.indexOf('.', ie)), 10);
+                }
+                if (ua.indexOf('Trident/') > 0) {
+                    let rv = ua.indexOf('rv:');
+                    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                }
+                let edge = ua.indexOf('.Edge/');
+                return edge > 0 && parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+            },
+            swiperDelay: 3
+        }
+        theme.detectIE() && alert('当前站点不支持IE浏览器（或您开启了兼容模式），请使用其他浏览器访问（或关闭兼容模式）。');
+        localStorage.getItem('dark-mode') && document.documentElement.classList.add('dark');
+
+        function darkModeHandler() {
+            if (!theme.isMobile) return;
+            if (theme.mediaQuery.matches) {
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+            }
+        }
+        darkModeHandler();
+        theme.mediaQuery.addListener(darkModeHandler);
+    </script>
+</head>
+
+<body class="line-numbers" data-prismjs-copy="复制" data-prismjs-copy-success="已复制" data-prismjs-copy-error="按Ctrl+C复制">
+    <header>
+        <div class="flex-v-between container">
+            <div class="flex-v-center left">
+                <a class="flex-v-center logo" href="/index.html" title="这里是免费的资源下载网站">
+                    科技语者资源站 </a>
+            </div>
+            <div class="flex-v-between right">
+                <nav>
+                    <nav>
+                        <ul class="nav-items">
+                            <li class="item"><a href="/index.html">首页</a></li>
+
+
+                            <li class="item">
+                                <a>镜像下载<i class="icon-simply icon-down ml-5"></i></a>
+                                <div class="nav-child-box">
+                                    <ul class="nav-child-items">
+                                        <li class="item"><a href="/resource/uos.html">统信UOS</a></li>
+                                        <li class="item"><a href="/resource/windows.html" target="_blank">windows</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <a href="https://chatbot.weixin.qq.com/webapp/6uBUvlZRRCueVjZ4brODzuPu1IL6me?robotName=%E7%A7%91%E6%8A%80%E8%AF%AD%E8%80%85">在线客服</a>
+                            </li>
+                            <li class="item">
+                                <a>联系我们<i class="icon-simply icon-down ml-5"></i></a>
+                                <div class="nav-child-box">
+                                    <ul class="nav-child-items">
+                                        <li class="item"><a href="/404.html">社交群聊</a></li>
+                                        <li class="item"><a href="/404.html">企业微信</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+                <div class="divider-vertical">
+                    <button class="button-switch" id="dark-mode" type="button" role="switch">
+        			<div class="icon-box">
+        				<i class="icon-simply icon-during"></i>
+        				<i class="icon-simply icon-night"></i>
+        			</div>
+        		</button>
+                </div>
+                <div class="divider-vertical"><a class="color-theme" href="/login/signin.html">登录</a></div>
+                <div class="divider-vertical"><a class="color-theme" href="/login/signup.html">注册</a></div>
+            </div>
+            <div class="flex-center xs-nav-button">
+                <div class="nav-burger"></div>
+            </div>
+            <div class="xs-nav-layer"></div>
+        </div>
+    </header>
+    <div class="container container-path">
+        <div class="web-path">
+            <a class="path" href="/index.html"><i class="icon-simply icon-home mr-5"></i>首页</a><span class="path">正文</span>
+        </div>
+    </div>
+    <div class="container frame-container container-article container-log">
+        <main class="frame-main">
+            <div class="box modularity">
+                <div class="modul-info">
+                    <div class="user-info">
+                        <a class="avatar" href="#">
+                            <img src="/img/微信图片_20240316142413.jpg" alt="科技语者">
+                        </a>
+                        <div class="user-meta">
+                            <div class="nickname"><a href="#">科技语者</a></div>
+                            <div class="other">2024-03-17 16:30</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modul-body">
+                    <article>
+                        <h1 class="title">科技语者资源站开站通知</h1>
+                        <div class="content">
+                            <div class="feed">科技语者资源站，融合科技智慧与语言艺术，提供最新资讯、前沿知识和学习资源。团队年轻热爱，精心内容，即将开放，敬请期待！</div>
+                            <p>尊敬的用户们，您好！我们荣幸地宣布，经过长期的筹备和努力，科技语者资源站即将隆重开站！作为一个致力于分享科技智慧与语言艺术的平台，我们将为广大用户提供丰富多彩、高质量的资源内容，以满足您对科技与语言的需求。</p>
+                            <P>在这里，您将能够轻松获取最新的科技资讯、学习最前沿的技术知识，探索语言的魅力和艺术，开拓视野，拓展思维。无论您是科技爱好者、语言学习者，还是对未来发展充满好奇，科技语者资源站都将是您不可或缺的信息宝库。</P>
+                            <P>我们的团队由一群热爱科技和语言的年轻人组成，他们具有丰富的经验和专业知识，将为您带来精心挑选的内容和独特的观点。我们相信，在科技与语言的交汇处，必定会迸发出无限的创意火花，激发您的灵感与潜能。</P>
+                            <p>科技语者资源站将于近期正式开放，届时我们将为您提供更多详细信息和精彩内容。让我们一起开启探索之旅，共同见证科技与语言的奇妙融合，共同感受数字时代的无限可能性！</p>
+                            <p>谢谢您的关注和支持，让我们携手并肩，共同开启科技与语言的未来之门！</p>
+                            <p>科技语者资源站开发团队敬上</p>
+                        </div>
+                    </article>
+                    <ul class="log-copyright">
+                        <li class="item"><span>本文作者：</span>科技语者</li>
+                        <li class="item"><span>本文链接：</span>https://moss.r-e.top/page/tz/<i class="clipboard icon-simply icon-copy-fill ml-5" data-clipboard-text="https://moss.r-e.top/page/tz/"></i></li>
+                        <li class="item"><span>版权申明：</span>除非特别说明，否则均为本站原创文章，转载或复制请注明出处。</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div class="pagination">
+    </div>
+    </div>
+    </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="xs-hidden">来不及找到心仪的内容？按<kbd class="mx-5">Ctrl</kbd>＋<kbd class="mx-5">D</kbd>加入收藏夹吧！</div>
+            <ul class="flex-list">
+                <li class="item"><a href="" target="_blank">科技语者备898129313552615号</a></li>
+            </ul>
+            <div class="info">
+                <a href="https://beian.miit.gov.cn/" target="_blank">科技语者ICP备3848081755号-8</a> | 本站基于<a href="https://curl.qcloud.com/tUxzPJel" target="_blank">腾讯云</a> | <a href="https://www.aliyun.com/daily-act/ecs/ecs_trial_benefits?userCode=0ooodptx"
+                    target="_blank">阿里云</a> | <a href="https://www.emlog.net" target="_blank">EmlogPro</a>
+                <script>
+                    ! function(p) {
+                        "use strict";
+                        ! function(t) {
+                            var s = window,
+                                e = document,
+                                i = p,
+                                c = "".concat("https:" === e.location.protocol ? "https://" : "http://", "sdk.51.la/js-sdk-pro.min.js"),
+                                n = e.createElement("script"),
+                                r = e.getElementsByTagName("script")[0];
+                            n.type = "text/javascript", n.setAttribute("charset", "UTF-8"), n.async = !0, n.src = c, n.id = "LA_COLLECT", i.d = n;
+                            var o = function() {
+                                s.LA.ids.push(i)
+                            };
+                            s.LA ? s.LA.ids && o() : (s.LA = p, s.LA.ids = [], o()), r.parentNode.insertBefore(n, r)
+                        }()
+                    }({
+                        id: "KHHxF3AZ2YznjvOy",
+                        ck: "KHHxF3AZ2YznjvOy",
+                        autoTrack: true,
+                        hashMode: true
+                    });
+                </script>
+            </div>
+        </div>
+    </footer>
+    <div class="sidebar">
+        <div class="item sidebar-totop">
+            <i class="icon-simply icon-totop"></i>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/layui.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/prism-core.min.js"></script>
+    <script src="/js/prism-autoloader.min.js"></script>
+    <script src="/js/prism-toolbar.min.js"></script>
+    <script src="/js/prism-line-numbers.min.js"></script>
+    <script src="/js/prism-show-language.min.js"></script>
+    <script src="/js/prism-copy-to-clipboard.min.js"></script>
+    <script src="/js/simply.js?t=1706260572"></script>
+</body>
+
+</html>

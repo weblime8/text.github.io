@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>统信UOS</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link type="text/css" rel="stylesheet" href="./css/header.css" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <style type="text/css">
+        .down_nav .nav strong {
+            font-size: 18px;
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 1195px;
+            margin: 0 auto;
+        }
+        
+        .path {
+            padding: 23px 0;
+            color: #999;
+        }
+        
+        .path a {
+            color: #3083eb;
+            margin: 0 8px;
+        }
+        
+        .path span {
+            color: #d0d0d0;
+        }
+        
+        .path .home_icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: top;
+            background: url(./img/图片1.png) no-repeat 0 -105px;
+        }
+        
+        .down_list .down_list_top {
+            height: 38px;
+            line-height: 38px;
+            background: #f3f6fd;
+            padding: 0 15px;
+            color: #999;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .down_list .down_list_top span.item_size {
+            margin-left: 500px;
+        }
+        
+        .down_list li {
+            height: 44px;
+            border-bottom: 1px solid #e9f0f8;
+            transition: 0.2s;
+            padding: 0 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .down_list li:hover {
+            background: #f3f6fd;
+        }
+        
+        .down_list li .file_name {
+            display: inline-block;
+            vertical-align: middle;
+            width: 450px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 44px;
+            color: #333;
+            font-size: 15px;
+        }
+        
+        .down_list li .type_icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            ;
+            margin-right: 10px;
+            background: url(./img/图片1.png) no-repeat 0 -370px;
+        }
+        
+        .down_list li.folder .type_icon {
+            background-position: 0 -308px;
+        }
+        
+        .down_list li.mp3 .type_icon {
+            background-position: 0 -160px;
+        }
+        
+        .down_list li.video .type_icon {
+            background-position: 0 -190px;
+            height: 12px;
+        }
+        
+        .down_list li.txt .type_icon {
+            background-position: 0 -210px;
+        }
+        
+        .down_list li.pdf .type_icon {
+            background-position: 0 -235px;
+        }
+        
+        .down_list li.doc .type_icon {
+            background-position: 0 -265px;
+        }
+        
+        .down_list li.ppt .type_icon {
+            background-position: 0 -290px;
+        }
+        
+        .down_list li.xls .type_icon {
+            background-position: 0 -315px;
+        }
+        
+        .down_list li .file_size {
+            color: #a9a9ab;
+            font-family: Arial;
+            line-height: 44px;
+        }
+        
+        .down_list li .down_btn {
+            width: 78px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            margin-right: 5px;
+            background: #3083eb;
+            border-radius: 2px;
+            vertical-align: middle;
+        }
+        /*.down_list li:hover .down_btn{display: block;}*/
+        
+        .down_list li .down_btn .down_icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: -3px;
+            margin-right: 6px;
+            background: url(./img/图片1.png) no-repeat 0 -345px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="down_top">
+        <div class="down_banner"></div>
+    </div>
+    <div class="down_nav">
+        <div class="nav"><i class="book_icon"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="path">
+            <div class="down_list">
+                <div class="down_list_top">
+                    <span class="item item_file">文件名</span>
+                    <span class="item item_size">大小</span>
+                </div>
+                <ul>
+                    <a href="https://cdimage-download.chinauos.com/desktop-professional/1060u1/uos-desktop-20-professional-1060-amd64-202309.iso?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA2NjYwODQsImZpbGVfbmFtZSI6ImRlc2t0b3AtcHJvZmVzc2lvbmFsLzEwNjB1MS91b3MtZGVza3RvcC0yMC1wcm9mZXNzaW9uYWwtMTA2MC1hbWQ2NC0yMDIzMDkuaXNvIn0.nFi5kn45AZ6kLvbw4-Zt7OCDSJpC7LHrYpl4d-rFIpY">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>统信UOS专业版.iso</span>
+                            <span class="file_size">4.00GB</span>
+                        </li>
+                    </a>
+                    <a href="/404.html">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>统信UOS家庭版[未开放下载].iso</span>
+                            <span class="file_size">--</span>
+                        </li>
+                    </a>
+                    <a href="/404.html">
+                        <li class="folder">
+                            <span class="file_name"><i class="type_icon"></i>统信UOS教育版[未开放下载].iso</span>
+                            <span class="file_size">--</span>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div style="display:none;">
+            <!--<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F16e42eb8238c0a0bc831002e9a3a1a6a' type='text/javascript'%3E%3C/script%3E"));
+	</script> -->
+        </div>
+        <script type='text/javascript'>
+            var _vds = _vds || [];
+            window._vds = _vds;
+            (function() {
+                _vds.push(['setAccountId', '94f79fa7bbb7eeb1']);
+                (function() {
+                    var vds = document.createElement('script');
+                    vds.type = 'text/javascript';
+                    vds.async = true;
+                    vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(vds, s);
+                })();
+            })();
+        </script>
+</body>
+
+</html>
